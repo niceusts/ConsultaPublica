@@ -1,0 +1,75 @@
+﻿@page
+@model ConsultaPublica.Pages.Form.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Movie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Movie.ID" />
+            <div class="form-group">
+                <label asp-for="Movie.Genero" class="control-label"></label>
+                <input asp-for="Movie.Genero" class="form-control" />
+                <span asp-validation-for="Movie.Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Residencia" class="control-label"></label>
+                <input asp-for="Movie.Residencia" class="form-control" />
+                <span asp-validation-for="Movie.Residencia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.InterferenciaCidade" class="control-label"></label>
+                <input asp-for="Movie.InterferenciaCidade" class="form-control" />
+                <span asp-validation-for="Movie.InterferenciaCidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.InterferenciaComunidade" class="control-label"></label>
+                <input asp-for="Movie.InterferenciaComunidade" class="form-control" />
+                <span asp-validation-for="Movie.InterferenciaComunidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.PrioridadePoderPublico" class="control-label"></label>
+                <input asp-for="Movie.PrioridadePoderPublico" class="form-control" />
+                <span asp-validation-for="Movie.PrioridadePoderPublico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Confianca" class="control-label"></label>
+                <input asp-for="Movie.Confianca" class="form-control" />
+                <span asp-validation-for="Movie.Confianca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.AcoesRelevancia" class="control-label"></label>
+                <input asp-for="Movie.AcoesRelevancia" class="form-control" />
+                <span asp-validation-for="Movie.AcoesRelevancia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Descreva" class="control-label"></label>
+                <input asp-for="Movie.Descreva" class="form-control" />
+                <span asp-validation-for="Movie.Descreva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.testeVorF" class="control-label"></label>
+                <input asp-for="Movie.testeVorF"  />
+                <span asp-validation-for="Movie.testeVorF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

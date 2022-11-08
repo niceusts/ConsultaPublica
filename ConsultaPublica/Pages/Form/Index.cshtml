@@ -1,0 +1,90 @@
+﻿@page
+@model ConsultaPublica.Pages.Form.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form>
+    <p>
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Genero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Residencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].InterferenciaCidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].InterferenciaComunidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].PrioridadePoderPublico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Confianca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].AcoesRelevancia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Descreva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].testeVorF)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Movie) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Residencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterferenciaCidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterferenciaComunidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrioridadePoderPublico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Confianca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcoesRelevancia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descreva)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.testeVorF)
+                </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
