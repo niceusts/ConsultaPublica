@@ -2,12 +2,6 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -15,4 +9,160 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: aliceblue;
+}
+
+.mbsc-col-sm-12 {
+    padding: 0 !important;
+}
+
+.form-check input[type="checkbox"] {
+    display: none;
+}
+
+    .form-check input[type="checkbox"] + label {
+        display: block;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 15px;
+        font: 14px/20px "Open Sans", Arial, sans-serif;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .form-check input[type="checkbox"]:hover + label:hover {
+        color: rgb(23, 86, 228);
+    }
+
+    .form-check input[type="checkbox"]:hover + label:before {
+        background: #50565a;
+        box-shadow: inset 0px 0px 0px 2px #f7f2f2;
+    }
+
+    .form-check input[type="checkbox"] + label:last-child {
+        margin-bottom: 0;
+    }
+
+    .form-check input[type="checkbox"] + label:before {
+        content: "";
+        display: block;
+        margin-top: 2.5px;
+        width: 1em;
+        height: 1em;
+        border: 1px solid #343a3f;
+        border-radius: 0.2em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+        transition: all 0.2s, background 0.2s ease-in-out;
+        background: #f3f3f3;
+    }
+
+    .form-check input[type="checkbox"]:checked + label:before {
+        width: 1.1em;
+        height: 1.1em;
+        margin-bottom: 3px;
+        border-radius: 0.2em;
+        border: 2px solid #fff;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background: #50565a;
+        box-shadow: 0 0 0 1px #000;
+    }
+
+.form-radio input[type="checkbox"] {
+    display: none;
+}
+
+    .form-radio input[type="checkbox"] + label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 20px;
+        font: 14px/20px "Open Sans", Arial, sans-serif;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .form-radio input[type="checkbox"]:hover + label:hover {
+        color: rgb(23, 86, 228);
+    }
+
+    .form-radio input[type="checkbox"]:hover + label:before {
+        border: 1px solid #343a3f;
+        width: 1.2em;
+        height: 1.2em;
+        border: 2px solid #fff;
+        background: #50565a;
+        box-shadow: 0 0 0 1px #000;
+    }
+
+    .form-radio input[type="checkbox"] + label:last-child {
+        margin-bottom: 0;
+    }
+
+    .form-radio input[type="checkbox"] + label:before {
+        content: "";
+        display: block;
+        width: 1.4em;
+        height: 1.4em;
+        border: 1px solid #343a3f;
+        border-radius: 1em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transition: all 0.2s, transform 0.3s ease-in-out;
+        transition: all 0.2s, transform 0.3s ease-in-out;
+        background: #f3f3f3;
+    }
+
+    .form-radio input[type="checkbox"]:checked + label:before {
+        border-radius: 1em;
+        border: 2px solid #fff;
+        width: 1.2em;
+        height: 1.2em;
+        background: #50565a;
+        box-shadow: 0 0 0 1px #000;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+
+.adjustSelect {
+    margin: 0 0 0 0 !important;
+    margin-bottom: 0.8rem !important;
+}
+
+h4{
+    text-align: justify;
+}
+
+.areaQuestions {
+    background: #8db1e324;
+    border: 1px solid #e3e3e3;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    margin: 1rem 0rem;
+}
+
+.form-check {
+    padding: 0 0 0 2rem;
+    margin: 0.7rem 0;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    .mbsc-col-sm-12{
+        margin: 1rem auto !important;
+
+    }
+    .form-check{
+        padding: 0 0 0 1rem;
+    }
 }

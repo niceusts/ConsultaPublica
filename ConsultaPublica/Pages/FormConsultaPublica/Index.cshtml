@@ -3,142 +3,359 @@
 @{
 }
 
-<h1>Create</h1>
-
-<h4>Movie</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        </form>
-    </div>
-</div>
-
-<div mbsc-page class="demo-input-label-types">
-    <div style="height:100%">
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div mbsc-page class="demo-input-label-types">
         <div class="mbsc-grid">
             <div class="mbsc-row mbsc-justify-content-center">
-                <div class="mbsc-col-sm-12 mbsc-col-md-8 mbsc-col-xl-4">
+                <div class="mbsc-col-sm-12 mbsc-col-md-10 mbsc-col-xl-8">
                     <div class="mbsc-form-group">
-                        <div class="mbsc-form-group-title">Consulta pública</div>
-                        <label>
-                            <select mbsc-dropdown data-label-style="floating" data-input-style="outline">
-                                <option>Gênero</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="feminino">Feminino</option>
-                                <option value="outro">Outro</option>
-                                <option value="abstencao">Prefiro não dizer</option>
-                            </select>
-                        </label>
-                        <label>
-                            <select mbsc-dropdown data-label-style="floating" data-input-style="outline"
-                                    data-start-icon="plus" data-end-icon="close">
-                                <option>Idade</option>
-                                <option>16 a 29 anos</option>
-                                <option>30 a 45 anos</option>
-                                <option>46 a 60 anos</option>
-                                <option>61 anos ou mais</option>
-                                
-                            </select>
-                        </label>
-                        <label>
-                            <select mbsc-dropdown data-label-style="floating" data-input-style="outline"
-                                    data-start-icon="plus" data-end-icon="close">
-                                <option>Residência</option>
-                                <option>Cidade Nova</option>
-                                <option>Bairro Alagoas</option>
-                                <option>Bairro Bonfim</option>
-                                <option>Bairro Botequim</option>
-                            </select>
-                        </label>
-                        <div class="formCheckInterf"> 
-                            Na sua opnião dos itens abaixo, quais são os que tem maior interferência na segurança pública de Estância?<b>Assinale no máximo 3 fatores</b>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Bairro Alagoas
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-                                <label class="form-check-label" for="flexCheckDefault1">
-                                    Bairro Alecrim
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-                                <label class="form-check-label" for="flexCheckDefault2">
-                                    Bairro Bonfim
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
-                                <label class="form-check-label" for="flexCheckDefault3">
-                                    Bairro Botequim
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
-                                <label class="form-check-label" for="flexCheckDefault4">
-                                    Bairro Candeal
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
-                                <label class="form-check-label" for="flexCheckDefault5">
-                                    Bairro Centro
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
-                                <label class="form-check-label" for="flexCheckDefault6">
-                                    Bairro Estancinha
-                                </label>
+                        <h4>Dados sobre gênero, idade e local de residência das pessoas entrevistadas</h4>
+                        <div class="areaQuestions">
+
+                            Gênero
+                            <label class="adjustSelect mbsc-col-sm-12 mbsc-col-md-6 mbsc-col-xl-6">
+                                <select mbsc-dropdown data-label-style="floating" data-input-style="outline">
+                                    <option hidden value=""></option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="outro">Outro</option>
+                                    <option value="abstencao">Prefiro não dizer</option>
+                                </select>
+                            </label>
+
+                            Idade
+                            <label class="adjustSelect mbsc-col-sm-12 mbsc-col-md-6 mbsc-col-xl-6">
+                                <select mbsc-dropdown data-label-style="floating" data-input-style="outline">
+                                    <option hidden value=""></option>
+                                    <option>16 a 29 anos</option>
+                                    <option>30 a 45 anos</option>
+                                    <option>46 a 60 anos</option>
+                                    <option>61 anos ou mais</option>
+                                </select>
+                            </label>
+
+                            Residência
+                            <label class="adjustSelect mbsc-col-sm-12 mbsc-col-md-6 mbsc-col-xl-6">
+                                <select mbsc-dropdown data-label-style="floating" data-input-style="outline">
+                                    <option hidden value=""></option>
+                                    <option>Cidade Nova</option>
+                                    <option>Bairro Alagoas</option>
+                                    <option>Bairro Bonfim</option>
+                                    <option>Bairro Botequim</option>
+                                </select>
+                            </label>
+                        </div>
+                        <h4>Pricipais questões que afetam a segurança pública em sua comunidade e na nossa cidade.</h4>
+                        <div class="areaQuestions">
+                            <div class="formCheckInterf">
+                                <div class="titleQuest">Na sua opnião dos itens abaixo, quais são os que tem maior interferência na segurança pública de Estância?<b>Assinale no máximo 3 fatores</b></div>
+                                <div class="form-check">
+                                    <input class="flexCheckDefault form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Pertubação do sossego
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="flexCheckDefault form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                                    <label class="form-check-label" for="flexCheckDefault1">
+                                        Tráfico de drogas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="flexCheckDefault form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                                    <label class="form-check-label" for="flexCheckDefault2">
+                                        Violência no trânsito
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="flexCheckDefault form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                                    <label class="form-check-label" for="flexCheckDefault3">
+                                        Crise econômica e desemprego
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="flexCheckDefault form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                                    <label class="form-check-label" for="flexCheckDefault4">
+                                        Usuários de drogas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="flexCheckDefault form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+                                    <label class="form-check-label" for="flexCheckDefault5">
+                                        Furtos e roubos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="flexCheckDefault form-check-input" type="checkbox" value="" id="flexCheckDefault6">
+                                    <label class="form-check-label" for="flexCheckDefault6">
+                                        Estupro, violência sexual
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="flexCheckDefault form-check-input" type="checkbox" value="" id="flexCheckDefault7">
+                                    <label class="form-check-label" for="flexCheckDefault7">
+                                        Violência doméstica contra idosos, mulheres e crianças
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                        
-                        @*<div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
-                                Checked checkbox
-                            </label>
-                        </div>*@
-                        
-                        <label class="mbsc-err">
-                            Email
-                            <input mbsc-input data-label-style="floating" data-input-style="outline" type="text"
-                                   data-start-icon="material-email" placeholder="With error styling"
-                                   data-error="true" />
-                        </label>
-                        <label class="mbsc-err">
-                            Password
-                            <input mbsc-input data-label-style="floating" data-input-style="outline" type="password"
-                                   data-password-toggle="true" placeholder="With icons and error message"
-                                   data-start-icon="lock2" data-error="true" data-error-message="An error occurred" />
-                        </label>
-                        <label>
-                            <input mbsc-input data-label-style="floating" data-input-style="outline" type="text"
-                                   data-start-icon="empty" placeholder="Without label" />
-                        </label>
-                        <label>
-                            About me
-                            <textarea mbsc-textarea data-label-style="floating" data-input-style="outline"
-                                      data-start-icon="bubble" data-start-icon-align="left"
-                                      placeholder="Textarea with left icon"></textarea>
-                        </label>
 
-                        <label>
-                            File upload
-                            <input mbsc-input data-label-style="floating" data-input-style="outline" type="file"
-                                   placeholder="Select file..." />
-                        </label>
+                        <div class="areaQuestions">
+                            <div class="formCheckInterfComuni">
+                                <div class="titleQuest">
+                                    Na sua opnião dos itens abaixo, dos itens abaixo relacionados, quais são os que tem maior interferência na segurança pública de sua comunidade?<b>
+                                        Assinale
+                                        no máximo 3 fatores
+                                    </b>
+                                </div>
+                                <div class="form-check">
+                                    <input class="formCheckInterfComuni form-check-input" type="checkbox" value="" id="formCheckInterfComuni">
+                                    <label class="form-check-label" for="formCheckInterfComuni">
+                                        Tráfico de drogas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="formCheckInterfComuni form-check-input" type="checkbox" value="" id="formCheckInterfComuni1">
+                                    <label class="form-check-label" for="formCheckInterfComuni1">
+                                        Crise econômica e desemprego
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="formCheckInterfComuni form-check-input" type="checkbox" value="" id="formCheckInterfComuni2">
+                                    <label class="form-check-label" for="formCheckInterfComuni2">
+                                        Estupro, violência sexual
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="formCheckInterfComuni form-check-input" type="checkbox" value="" id="formCheckInterfComuni3">
+                                    <label class="form-check-label" for="formCheckInterfComuni3">
+                                        Usuários de drogas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="formCheckInterfComuni form-check-input" type="checkbox" value="" id="formCheckInterfComuni4">
+                                    <label class="form-check-label" for="formCheckInterfComuni4">
+                                        Pertubação do sossego
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="formCheckInterfComuni form-check-input" type="checkbox" value="" id="formCheckInterfComuni5">
+                                    <label class="form-check-label" for="formCheckInterfComuni5">
+                                        Violência no trânsito
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="formCheckInterfComuni form-check-input" type="checkbox" value="" id="formCheckInterfComuni6">
+                                    <label class="form-check-label" for="formCheckInterfComuni6">
+                                        Furtos e roubos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="formCheckInterfComuni form-check-input" type="checkbox" value="" id="formCheckInterfComuni7">
+                                    <label class="form-check-label" for="formCheckInterfComuni">
+                                        Violência doméstica contra idosos, mulheres e crianças
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="areaQuestions">
+                            <div class="prioriPoder">
+                                <div class="titleQuest"> Dentre as ações abaixo, avalie quais devem ser tratadas como prioridade pelo Poder Público (parceria entre Governo Federal, Governo Estadual e Prefeitura de Estância). <b>Assinale no máximo 3 fatores:</b></div>
+                                <div class="form-check">
+                                    <input class="prioriPoder form-check-input" type="checkbox" value="" id="prioriPoder">
+                                    <label class="form-check-label" for="prioriPoder">
+                                        Tráfico de drogas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="prioriPoder form-check-input" type="checkbox" value="" id="prioriPoder1">
+                                    <label class="form-check-label" for="prioriPoder1">
+                                        Atuação integrada dos órgãos de Segurança Pública: Guarda Municipal e Polícias Civil e Militar no combate ao tráfico de drogas nas comunidades
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="prioriPoder form-check-input" type="checkbox" value="" id="prioriPoder2">
+                                    <label class="form-check-label" for="prioriPoder2">
+                                        Promover o tratamento adequado aos usuários de álcool e outras drogas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="prioriPoder form-check-input" type="checkbox" value="" id="prioriPoder3">
+                                    <label class="form-check-label" for="prioriPoder3">
+                                        Atuar para a redução do número de casos de violência doméstica contra mulheres, crianças e idosos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="prioriPoder form-check-input" type="checkbox" value="" id="prioriPoder4">
+                                    <label class="form-check-label" for="prioriPoder4">
+                                        Ampliação do sistema de monitoramento com câmeras inteligentes da Guarda Municipal
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="prioriPoder form-check-input" type="checkbox" value="" id="prioriPoder5">
+                                    <label class="form-check-label" for="prioriPoder5">
+                                        Melhorar o sistema de iluminação da cidade
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="prioriPoder form-check-input" type="checkbox" value="" id="prioriPoder6">
+                                    <label class="form-check-label" for="prioriPoder6">
+                                        Melhorar as ações para segurança no trânsito
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="prioriPoder form-check-input" type="checkbox" value="" id="prioriPoder7">
+                                    <label class="form-check-label" for="prioriPoder7">
+                                        Ampliar a ronda nas escolas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="prioriPoder form-check-input" type="checkbox" value="" id="prioriPoder8">
+                                    <label class="form-check-label" for="prioriPoder8">
+                                        Ampliar a utilização dos espaços públicos
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="areaQuestions">
+                            <div class="prioriPoder">
+                                <div class="titleQuest"> Você confia no trabalho da Guarda Municipal de Estância? <b>Assinale apenas 1 fator:</b></div>
+                                <div class="form-check">
+                                    <input class="confRadio form-check-input" type="checkbox" value="" id="confRadio">
+                                    <label class="form-check-label" for="confRadio">
+                                        Sim
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="confRadio form-check-input" type="checkbox" value="" id="confRadio1">
+                                    <label class="form-check-label" for="confRadio1">
+                                        Não
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="confRadio form-check-input" type="checkbox" value="" id="confRadio2">
+                                    <label class="form-check-label" for="confRadio2">
+                                        Ampliar a utilização dos espaços públicos
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="areaQuestions">
+                            <div class="maiorRelev">
+                                <div class="titleQuest"> Das ações desenvolvidas pela Guarda Municipal de Estância, quais delas você ver com maior relevância? <b>Assinale no máximo 3 fatores:</b></div>
+                                <div class="form-check">
+                                    <input class="relev form-check-input" type="checkbox" value="" id="relev">
+                                    <label class="form-check-label" for="relev">
+                                        Ronda Escolar
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="relev form-check-input" type="checkbox" value="" id="relev1">
+                                    <label class="form-check-label" for="relev1">
+                                        Patrulhamento Preventivo em espaços públicos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="relev form-check-input" type="checkbox" value="" id="relev2">
+                                    <label class="form-check-label" for="relev2">
+                                        Guarda Vidas na região das praias
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="relev form-check-input" type="checkbox" value="" id="relev3">
+                                    <label class="form-check-label" for="relev3">
+                                        Combate a Perturbação do Sossego
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="relev form-check-input" type="checkbox" value="" id="relev4">
+                                    <label class="form-check-label" for="relev4">
+                                        Combate aos Maus tratos contra animais
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="relev form-check-input" type="checkbox" value="" id="relev5">
+                                    <label class="form-check-label" for="relev5">
+                                        Preservação Ambiental
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="relev form-check-input" type="checkbox" value="" id="relev6">
+                                    <label class="form-check-label" for="relev6">
+                                        Monitoramento Eletrônico através de Câmeras em espaços públicos
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="areaQuestions">
+                            Quer contribuir com mais alguma informação? Descreva aqui:
+                            <label>
+                                <textarea mbsc-textarea data-label-style="floating" data-input-style="outline"
+                                          data-start-icon="bubble" data-start-icon-align="left"
+                                          placeholder="Textarea with left icon"></textarea>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</form>
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+    $(document).on('change', '.flexCheckDefault', function () {
+        var countShared = $('.flexCheckDefault:checked').length;
+        if (countShared > 3 && $(this).is(':checked')) {
+            alert("São no máximo três opções.");
+            $(this).prop('checked', false);
+        }
+    });
+
+    $(document).on('change', '.formCheckInterfComuni', function () {
+        var countShared = $('.formCheckInterfComuni:checked').length;
+        if (countShared > 3 && $(this).is(':checked')) {
+            alert("São no máximo três opções.");
+            $(this).prop('checked', false);
+        }
+    });
+
+    $(document).on('change', '.prioriPoder', function () {
+        var countShared = $('.prioriPoder:checked').length;
+        if (countShared > 3 && $(this).is(':checked')) {
+            alert("São no máximo três opções.");
+            $(this).prop('checked', false);
+        }
+    });
+
+    $(document).on('change', '.confRadio', function () {
+        var countShared = $('.confRadio:checked').length;
+        if (countShared > 1 && $(this).is(':checked')) {
+            $(this).prop('checked', false);
+        }
+    });
+
+    $(document).on('change', '.relev', function () {
+        var countShared = $('.relev:checked').length;
+        if (countShared > 3 && $(this).is(':checked')) {
+            alert("São no máximo três opções.");
+            $(this).prop('checked', false);
+        }
+    });
+</script>
+
+
 
 
 
